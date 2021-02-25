@@ -13,7 +13,6 @@
 		C5D925AC25DD6D3A00A7C4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925AB25DD6D3A00A7C4AA /* AppDelegate.swift */; };
 		C5D925AE25DD6D3A00A7C4AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925AD25DD6D3A00A7C4AA /* SceneDelegate.swift */; };
 		C5D925B025DD6D3A00A7C4AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925AF25DD6D3A00A7C4AA /* ViewController.swift */; };
-		C5D925B325DD6D3A00A7C4AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D925B125DD6D3A00A7C4AA /* Main.storyboard */; };
 		C5D925B525DD6D3A00A7C4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5D925B425DD6D3A00A7C4AA /* Assets.xcassets */; };
 		C5D925B825DD6D3A00A7C4AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D925B625DD6D3A00A7C4AA /* LaunchScreen.storyboard */; };
 		C5D925C325DD6D3A00A7C4AA /* TinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925C225DD6D3A00A7C4AA /* TinderTests.swift */; };
@@ -49,7 +48,6 @@
 		C5D925AB25DD6D3A00A7C4AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5D925AD25DD6D3A00A7C4AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C5D925AF25DD6D3A00A7C4AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C5D925B225DD6D3A00A7C4AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5D925B425DD6D3A00A7C4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5D925B725DD6D3A00A7C4AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5D925B925DD6D3A00A7C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +112,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C59133DA25E7349300D2DD0F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C5D925AB25DD6D3A00A7C4AA /* AppDelegate.swift */,
+				C5D925AD25DD6D3A00A7C4AA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		C5D9259F25DD6D3A00A7C4AA = {
 			isa = PBXGroup;
 			children = (
@@ -139,10 +146,8 @@
 		C5D925AA25DD6D3A00A7C4AA /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
-				C5D925AB25DD6D3A00A7C4AA /* AppDelegate.swift */,
-				C5D925AD25DD6D3A00A7C4AA /* SceneDelegate.swift */,
+				C59133DA25E7349300D2DD0F /* App */,
 				C5D925AF25DD6D3A00A7C4AA /* ViewController.swift */,
-				C5D925B125DD6D3A00A7C4AA /* Main.storyboard */,
 				C5D925B425DD6D3A00A7C4AA /* Assets.xcassets */,
 				C5D925B625DD6D3A00A7C4AA /* LaunchScreen.storyboard */,
 				C5D925B925DD6D3A00A7C4AA /* Info.plist */,
@@ -279,7 +284,6 @@
 			files = (
 				C5D925B825DD6D3A00A7C4AA /* LaunchScreen.storyboard in Resources */,
 				C5D925B525DD6D3A00A7C4AA /* Assets.xcassets in Resources */,
-				C5D925B325DD6D3A00A7C4AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,14 +466,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C5D925B125DD6D3A00A7C4AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C5D925B225DD6D3A00A7C4AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C5D925B625DD6D3A00A7C4AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
