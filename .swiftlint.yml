@@ -25,7 +25,7 @@ disabled_rules:
   #- function_body_length
   #- function_parameter_count
   #- generic_type_name
-  #- identifier_name
+  - identifier_name
   #- implicit_getter
   #- inert_defer
   #- is_disjoint
