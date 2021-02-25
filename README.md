@@ -4,13 +4,19 @@
 
 マッチングアプリ使えなくて悲しいので作ってます
 
-# 使った技術
+# Using Tools and Libraries
 - RxSwift
 - RxCocoa
 - SwiftLint
 
-# アーキテクチャ
-MVVM
+# Configuration
+UI implementation: codeLayout + XIB
+
+Architecture: MVVM + RxSwift
 
 # Author
-miserii
+@miserii
+
+# Contribution
+- [New issue](https://github.com/miserii/Tinder/issues)
+- [New pull request](https://github.com/miserii/Tinder/pulls)
