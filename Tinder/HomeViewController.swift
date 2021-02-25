@@ -7,10 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .white
 
         let view1 = UIView()
@@ -19,17 +20,16 @@ class ViewController: UIViewController {
         let view2 = UIView()
         view2.backgroundColor = .blue
 
-        let view3 = UIView()
-        view3.backgroundColor = .green
+        let bottomView = BottomView()
 
-        let stackView = UIStackView(arrangedSubviews: [view1, view2, view3])
+        let stackView = UIStackView(arrangedSubviews: [view1, view2, bottomView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         self.view.addSubview(stackView)
 
         [
             view1.heightAnchor.constraint(equalToConstant: 100),
-            view3.heightAnchor.constraint(equalToConstant: 100),
+            bottomView.heightAnchor.constraint(equalToConstant: 120),
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
