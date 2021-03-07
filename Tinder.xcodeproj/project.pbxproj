@@ -21,6 +21,7 @@
 		C5E5BAB825F3ECAC002DB779 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB725F3ECAC002DB779 /* RxCocoa */; };
 		C5E5BABA25F3ECAC002DB779 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB925F3ECAC002DB779 /* RxRelay */; };
 		C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB0A25F553F2002DB779 /* UIView.swift */; };
+		C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB0F25F55E40002DB779 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C5D925CF25DD6D3A00A7C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E5BA6925F0CA81002DB779 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		C5E5BB0A25F553F2002DB779 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C5E5BB0F25F55E40002DB779 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				C591340F25E745F900D2DD0F /* BottomView.swift */,
+				C5E5BB0F25F55E40002DB779 /* CardView.swift */,
 				C5E5BA6925F0CA81002DB779 /* TopView.swift */,
 			);
 			path = Views;
@@ -339,6 +342,7 @@
 				C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */,
 				C5D925AC25DD6D3A00A7C4AA /* AppDelegate.swift in Sources */,
 				C5E5BA6A25F0CA81002DB779 /* TopView.swift in Sources */,
+				C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */,
 				C5D925AE25DD6D3A00A7C4AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
