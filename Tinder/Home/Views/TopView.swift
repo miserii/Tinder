@@ -57,6 +57,7 @@ class TopView: UIView {
         tinderButton.isSelected = true
     }
 
+    // トップのボタンをタップした時にimageを切り替える
     private func setUpBindings() {
         tinderButton.rx.tap
             .asDriver()
