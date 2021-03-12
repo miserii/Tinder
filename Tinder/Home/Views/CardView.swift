@@ -9,102 +9,41 @@ import UIKit
 
 class CardView: UIView {
 
-    let cardImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.backgroundColor = .blue
-        iv.layer.cornerRadius = 10
-        iv.contentMode = .scaleAspectFill
-        iv.image = UIImage(named: "bllie")
-        iv.clipsToBounds = true
-        
-        return iv
-    }()
+    private let gradientLayer = CAGradientLayer()
 
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 40, weight: .heavy)
-        label.textColor = .white
-        label.text = "name age"
-
-        return label
-    }()
-
-    let infoButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "info.circle.fill")?.resize(size: .init(width: 40, height: 40)), for: .normal)
-        button.tintColor = .white
-        button.imageView?.contentMode = .scaleAspectFit
-
-        return button
-    }()
-
-    let residenceLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 20, weight: .regular)
-        label.textColor = .white
-        label.text = "address"
-
-        return label
-    }()
-
-    let hobbyLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 25, weight: .regular)
-        label.textColor = .white
-        label.text = "hobby"
-
-        return label
-    }()
-
-    let introductionLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 25, weight: .regular)
-        label.textColor = .white
-        label.text = "one word"
-
-        return label
-    }()
-
-    let goodLabel: UILabel = {
-        let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 45)
-        label.text = "GOOD"
-        label.textColor = .rgb(red: 137, green: 223, blue: 86)
-        label.layer.borderWidth = 3
-        label.layer.borderColor = UIColor.rgb(red: 137, green: 223, blue: 86).cgColor
-        label.layer.cornerRadius = 10
-        label.textAlignment = .center
-        label.alpha = 0
-
-        return label
-    }()
-
-    let nopeLabel: UILabel = {
-        let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 45)
-        label.text = "NOPE"
-        label.textColor = .rgb(red: 222, green: 110, blue: 110)
-        label.layer.borderWidth = 3
-        label.layer.borderColor = UIColor.rgb(red: 222, green: 110, blue: 110).cgColor
-        label.layer.cornerRadius = 10
-        label.textAlignment = .center
-        label.alpha = 0
-
-        return label
-    }()
+    // MARK: UIView
+    private let cardImageView = CardImageView(frame: .zero)
+    private let infoButton = UIButton(type: .system).createCardInfoButton()
+    private let nameLabel = CardInfoLabel(frame: .zero, labelText: "name age", labelFont: .systemFont(ofSize: 40, weight: .heavy))
+    private let residenceLabel = CardInfoLabel(frame: .zero, labelText: "address", labelFont: .systemFont(ofSize: 20, weight: .regular))
+    private let hobbyLabel = CardInfoLabel(frame: .zero, labelText: "hoge", labelFont: .systemFont(ofSize: 25, weight: .regular))
+    private let introductionLabel = CardInfoLabel(frame: .zero, labelText: "one word", labelFont: .systemFont(ofSize: 25, weight: .regular))
+    private let goodLabel = CardInfoLabel(frame: .zero, labelText: "LIKE", labelColor: .rgb(red: 137, green: 223, blue: 86))
+    private let nopeLabel = CardInfoLabel(frame: .zero, labelText: "NOPE", labelColor: .rgb(red: 222, green: 110, blue: 110))
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         setUpLayout()
+        setUpGradientLayer()
 
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panCardView))
         self.addGestureRecognizer(panGesture)
     }
 
+    // Viewのグラデーション
+    private func setUpGradientLayer() {
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradientLayer.locations = [0.3, 1.1]
+        cardImageView.layer.addSublayer(gradientLayer)
+    }
+
+    override func layoutSubviews() {
+        gradientLayer.frame = self.bounds
+    }
+
     @objc private func panCardView(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: self)
-
         if gesture.state == .changed {
             self.panChange(translation: translation)
 

@@ -23,6 +23,9 @@
 		C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB0A25F553F2002DB779 /* UIView.swift */; };
 		C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB0F25F55E40002DB779 /* CardView.swift */; };
 		C5E5BB1825F572F2002DB779 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB1725F572F2002DB779 /* UIColor.swift */; };
+		C5E5BB1D25F599F7002DB779 /* CardInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB1C25F599F7002DB779 /* CardInfoLabel.swift */; };
+		C5E5BD4D25FB4500002DB779 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BD4C25FB4500002DB779 /* UIButton.swift */; };
+		C5E5BD5225FB45F9002DB779 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BD5125FB45F9002DB779 /* CardImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		C5E5BB0A25F553F2002DB779 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C5E5BB0F25F55E40002DB779 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C5E5BB1725F572F2002DB779 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C5E5BB1C25F599F7002DB779 /* CardInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoLabel.swift; sourceTree = "<group>"; };
+		C5E5BD4C25FB4500002DB779 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		C5E5BD5125FB45F9002DB779 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 				C591341725E7657700D2DD0F /* UIImage.swift */,
 				C5E5BB0A25F553F2002DB779 /* UIView.swift */,
 				C5E5BB1725F572F2002DB779 /* UIColor.swift */,
+				C5E5BD4C25FB4500002DB779 /* UIButton.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -177,6 +184,8 @@
 				C591340F25E745F900D2DD0F /* BottomView.swift */,
 				C5E5BB0F25F55E40002DB779 /* CardView.swift */,
 				C5E5BA6925F0CA81002DB779 /* TopView.swift */,
+				C5E5BB1C25F599F7002DB779 /* CardInfoLabel.swift */,
+				C5E5BD5125FB45F9002DB779 /* CardImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,12 +350,15 @@
 			files = (
 				C5D925B025DD6D3A00A7C4AA /* HomeViewController.swift in Sources */,
 				C591341825E7657700D2DD0F /* UIImage.swift in Sources */,
+				C5E5BB1D25F599F7002DB779 /* CardInfoLabel.swift in Sources */,
 				C591341025E745F900D2DD0F /* BottomView.swift in Sources */,
 				C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */,
 				C5E5BB1825F572F2002DB779 /* UIColor.swift in Sources */,
 				C5D925AC25DD6D3A00A7C4AA /* AppDelegate.swift in Sources */,
 				C5E5BA6A25F0CA81002DB779 /* TopView.swift in Sources */,
+				C5E5BD4D25FB4500002DB779 /* UIButton.swift in Sources */,
 				C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */,
+				C5E5BD5225FB45F9002DB779 /* CardImageView.swift in Sources */,
 				C5D925AE25DD6D3A00A7C4AA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
