@@ -19,9 +19,9 @@
 		C5D925C325DD6D3A00A7C4AA /* TinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925C225DD6D3A00A7C4AA /* TinderTests.swift */; };
 		C5D925CE25DD6D3A00A7C4AA /* TinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925CD25DD6D3A00A7C4AA /* TinderUITests.swift */; };
 		C5E5BA6A25F0CA81002DB779 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BA6925F0CA81002DB779 /* TopView.swift */; };
-		C5E5BAB625F3ECAC002DB779 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB525F3ECAC002DB779 /* SwiftPackageProductDependency */; };
-		C5E5BAB825F3ECAC002DB779 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB725F3ECAC002DB779 /* SwiftPackageProductDependency */; };
-		C5E5BABA25F3ECAC002DB779 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB925F3ECAC002DB779 /* SwiftPackageProductDependency */; };
+		C5E5BAB625F3ECAC002DB779 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB525F3ECAC002DB779 /* RxSwift */; };
+		C5E5BAB825F3ECAC002DB779 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB725F3ECAC002DB779 /* RxCocoa */; };
+		C5E5BABA25F3ECAC002DB779 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C5E5BAB925F3ECAC002DB779 /* RxRelay */; };
 		C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB0A25F553F2002DB779 /* UIView.swift */; };
 		C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB0F25F55E40002DB779 /* CardView.swift */; };
 		C5E5BB1825F572F2002DB779 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BB1725F572F2002DB779 /* UIColor.swift */; };
@@ -29,6 +29,9 @@
 		C5E5BD4D25FB4500002DB779 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BD4C25FB4500002DB779 /* UIButton.swift */; };
 		C5E5BD5225FB45F9002DB779 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BD5125FB45F9002DB779 /* CardImageView.swift */; };
 		C5E5BF2126064ABB002DB779 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5E5BF2026064ABB002DB779 /* GoogleService-Info.plist */; };
+		C5E5BF3B26075B9A002DB779 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BF3A26075B9A002DB779 /* RegisterViewController.swift */; };
+		C5E5BF442607627F002DB779 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BF432607627F002DB779 /* RegisterTextField.swift */; };
+		C5E5BF49260764FD002DB779 /* RegisterTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BF48260764FD002DB779 /* RegisterTitleLabel.swift */; };
 		DCBE6F250312FBD39BFA1BF7 /* Pods_Tinder_TinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64088413FF34CC0BD92A0057 /* Pods_Tinder_TinderUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		C5E5BD4C25FB4500002DB779 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		C5E5BD5125FB45F9002DB779 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		C5E5BF2026064ABB002DB779 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5E5BF3A26075B9A002DB779 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C5E5BF432607627F002DB779 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
+		C5E5BF48260764FD002DB779 /* RegisterTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTitleLabel.swift; sourceTree = "<group>"; };
 		CCB44D46EDEAE0D182CD581C /* Pods-Tinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder.release.xcconfig"; path = "Target Support Files/Pods-Tinder/Pods-Tinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,9 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E5BABA25F3ECAC002DB779 /* BuildFile in Frameworks */,
-				C5E5BAB825F3ECAC002DB779 /* BuildFile in Frameworks */,
-				C5E5BAB625F3ECAC002DB779 /* BuildFile in Frameworks */,
+				C5E5BABA25F3ECAC002DB779 /* RxRelay in Frameworks */,
+				C5E5BAB825F3ECAC002DB779 /* RxCocoa in Frameworks */,
+				C5E5BAB625F3ECAC002DB779 /* RxSwift in Frameworks */,
 				3BA9BD20ADACEB143DE96400 /* Pods_Tinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +141,6 @@
 				3700E8B4A60B1A6F10D71BC0 /* Pods-TinderTests.debug.xcconfig */,
 				187A835841944D0D607DB245 /* Pods-TinderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -186,6 +191,7 @@
 			children = (
 				C59133DA25E7349300D2DD0F /* App */,
 				C59A3BB625EA671900B3BF0A /* extension */,
+				C5E5BF3926075B78002DB779 /* Register */,
 				C5E5BA6425F0CA37002DB779 /* Home */,
 				C5D925B425DD6D3A00A7C4AA /* Assets.xcassets */,
 				C5D925B625DD6D3A00A7C4AA /* LaunchScreen.storyboard */,
@@ -234,6 +240,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C5E5BF3926075B78002DB779 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C5E5BF4226076257002DB779 /* Views */,
+				C5E5BF3A26075B9A002DB779 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C5E5BF4226076257002DB779 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5E5BF432607627F002DB779 /* RegisterTextField.swift */,
+				C5E5BF48260764FD002DB779 /* RegisterTitleLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,9 +278,9 @@
 			);
 			name = Tinder;
 			packageProductDependencies = (
-				C5E5BAB525F3ECAC002DB779 /* SwiftPackageProductDependency */,
-				C5E5BAB725F3ECAC002DB779 /* SwiftPackageProductDependency */,
-				C5E5BAB925F3ECAC002DB779 /* SwiftPackageProductDependency */,
+				C5E5BAB525F3ECAC002DB779 /* RxSwift */,
+				C5E5BAB725F3ECAC002DB779 /* RxCocoa */,
+				C5E5BAB925F3ECAC002DB779 /* RxRelay */,
 			);
 			productName = Tinder;
 			productReference = C5D925A825DD6D3A00A7C4AA /* Tinder.app */;
@@ -333,7 +357,7 @@
 			);
 			mainGroup = C5D9259F25DD6D3A00A7C4AA;
 			packageReferences = (
-				C5E5BAB425F3ECAC002DB779 /* RemoteSwiftPackageReference */,
+				C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = C5D925A925DD6D3A00A7C4AA /* Products */;
 			projectDirPath = "";
@@ -500,6 +524,7 @@
 			files = (
 				C5D925B025DD6D3A00A7C4AA /* HomeViewController.swift in Sources */,
 				C591341825E7657700D2DD0F /* UIImage.swift in Sources */,
+				C5E5BF49260764FD002DB779 /* RegisterTitleLabel.swift in Sources */,
 				C5E5BB1D25F599F7002DB779 /* CardInfoLabel.swift in Sources */,
 				C591341025E745F900D2DD0F /* BottomView.swift in Sources */,
 				C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */,
@@ -508,6 +533,8 @@
 				C5E5BA6A25F0CA81002DB779 /* TopView.swift in Sources */,
 				C5E5BD4D25FB4500002DB779 /* UIButton.swift in Sources */,
 				C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */,
+				C5E5BF442607627F002DB779 /* RegisterTextField.swift in Sources */,
+				C5E5BF3B26075B9A002DB779 /* RegisterViewController.swift in Sources */,
 				C5E5BD5225FB45F9002DB779 /* CardImageView.swift in Sources */,
 				C5D925AE25DD6D3A00A7C4AA /* SceneDelegate.swift in Sources */,
 			);
@@ -842,7 +869,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C5E5BAB425F3ECAC002DB779 /* RemoteSwiftPackageReference */ = {
+		C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -853,19 +880,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C5E5BAB525F3ECAC002DB779 /* SwiftPackageProductDependency */ = {
+		C5E5BAB525F3ECAC002DB779 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C5E5BAB425F3ECAC002DB779 /* RemoteSwiftPackageReference */;
+			package = C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		C5E5BAB725F3ECAC002DB779 /* SwiftPackageProductDependency */ = {
+		C5E5BAB725F3ECAC002DB779 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C5E5BAB425F3ECAC002DB779 /* RemoteSwiftPackageReference */;
+			package = C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		C5E5BAB925F3ECAC002DB779 /* SwiftPackageProductDependency */ = {
+		C5E5BAB925F3ECAC002DB779 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C5E5BAB425F3ECAC002DB779 /* RemoteSwiftPackageReference */;
+			package = C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
 /* End XCSwiftPackageProductDependency section */
