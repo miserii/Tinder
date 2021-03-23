@@ -11,6 +11,7 @@
 		3BA9BD20ADACEB143DE96400 /* Pods_Tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598719517EC09E7A1FF60C21 /* Pods_Tinder.framework */; };
 		C591341025E745F900D2DD0F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591340F25E745F900D2DD0F /* BottomView.swift */; };
 		C591341825E7657700D2DD0F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591341725E7657700D2DD0F /* UIImage.swift */; };
+		C59C70052609D0C100595083 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C70042609D0C100595083 /* RegisterButton.swift */; };
 		C5D925AC25DD6D3A00A7C4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925AB25DD6D3A00A7C4AA /* AppDelegate.swift */; };
 		C5D925AE25DD6D3A00A7C4AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925AD25DD6D3A00A7C4AA /* SceneDelegate.swift */; };
 		C5D925B025DD6D3A00A7C4AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D925AF25DD6D3A00A7C4AA /* HomeViewController.swift */; };
@@ -63,6 +64,7 @@
 		6877AB71823A86159267B0B1 /* Pods-Tinder-TinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-TinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-TinderUITests/Pods-Tinder-TinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C591340F25E745F900D2DD0F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		C591341725E7657700D2DD0F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		C59C70042609D0C100595083 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		C5D925A825DD6D3A00A7C4AA /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D925AB25DD6D3A00A7C4AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5D925AD25DD6D3A00A7C4AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				C5E5BF432607627F002DB779 /* RegisterTextField.swift */,
 				C5E5BF48260764FD002DB779 /* RegisterTitleLabel.swift */,
+				C59C70042609D0C100595083 /* RegisterButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59C70052609D0C100595083 /* RegisterButton.swift in Sources */,
 				C5D925B025DD6D3A00A7C4AA /* HomeViewController.swift in Sources */,
 				C591341825E7657700D2DD0F /* UIImage.swift in Sources */,
 				C5E5BF49260764FD002DB779 /* RegisterTitleLabel.swift in Sources */,

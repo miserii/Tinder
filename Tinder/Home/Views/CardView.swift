@@ -14,12 +14,12 @@ class CardView: UIView {
     // MARK: UIView
     private let cardImageView = CardImageView(frame: .zero)
     private let infoButton = UIButton(type: .system).createCardInfoButton()
-    private let nameLabel = CardInfoLabel(frame: .zero, labelText: "名前 19", labelFont: .systemFont(ofSize: 40, weight: .heavy))
-    private let residenceLabel = CardInfoLabel(frame: .zero, labelText: "東京", labelFont: .systemFont(ofSize: 20, weight: .regular))
-    private let hobbyLabel = CardInfoLabel(frame: .zero, labelText: "趣味", labelFont: .systemFont(ofSize: 25, weight: .regular))
-    private let introductionLabel = CardInfoLabel(frame: .zero, labelText: "よろしくお願いします", labelFont: .systemFont(ofSize: 25, weight: .regular))
-    private let goodLabel = CardInfoLabel(frame: .zero, labelText: "LIKE", labelColor: .rgb(red: 137, green: 223, blue: 86))
-    private let nopeLabel = CardInfoLabel(frame: .zero, labelText: "NOPE", labelColor: .rgb(red: 222, green: 110, blue: 110))
+    private let nameLabel = CardInfoLabel(labelText: "名前 19", labelFont: .systemFont(ofSize: 40, weight: .heavy))
+    private let residenceLabel = CardInfoLabel(labelText: "東京", labelFont: .systemFont(ofSize: 20, weight: .regular))
+    private let hobbyLabel = CardInfoLabel(labelText: "趣味", labelFont: .systemFont(ofSize: 25, weight: .regular))
+    private let introductionLabel = CardInfoLabel(labelText: "よろしくお願いします", labelFont: .systemFont(ofSize: 25, weight: .regular))
+    private let goodLabel = CardInfoLabel(labelText: "LIKE", labelColor: .rgb(red: 137, green: 223, blue: 86))
+    private let nopeLabel = CardInfoLabel(labelText: "NOPE", labelColor: .rgb(red: 222, green: 110, blue: 110))
 
     override init(frame: CGRect) {
         super.init(frame: frame)

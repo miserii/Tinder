@@ -6,31 +6,26 @@
 //
 
 import UIKit
+import RxSwift
 
 class RegisterViewController: UIViewController {
 
+    private let disposeBag = DisposeBag()
+
+    // MARK: Views
     private let titleLabel = RegisterTitleLabel()
     private let nameTextField = RegisterTextField(placeHolderText: "名前")
     private let emailTextField = RegisterTextField(placeHolderText: "メールアドレス")
     private let passwordTextField = RegisterTextField(placeHolderText: "パスワード")
-
-    let registerButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("登録", for: .normal)
-        button.backgroundColor = .red
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 10
-
-        return button
-    }()
+    private let registerButton = RegisterButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        view.backgroundColor = .yellow
-
+        // 画面のグラデーション
+        setUpGradientLayer()
         setUpLayout()
+        setUpBindins()
     }
 
     private func setUpLayout() {
@@ -49,8 +44,50 @@ class RegisterViewController: UIViewController {
         titleLabel.anchor(bottom: baseStackView.topAnchor, centerX: view.centerXAnchor, bottomPadding: 20)
     }
 
-    private func setUpGradient() {
-        
+    private func setUpGradientLayer() {
+        let layer = CAGradientLayer()
+        let startColor = UIColor.rgb(red: 227, green: 48, blue: 78).cgColor
+        let endColor = UIColor.rgb(red: 245, green: 208, blue: 108).cgColor
+
+        layer.colors = [startColor, endColor]
+        layer.locations = [0.0, 1.3]
+        layer.frame = view.bounds
+        view.layer.addSublayer(layer)
+    }
+
+    private func setUpBindins() {
+        nameTextField.rx.text
+            .asDriver()
+            .drive { [weak self] text in
+                // textの情報ハンドル
+            }
+            .disposed(by: disposeBag)
+
+        emailTextField.rx.text
+            .asDriver()
+            .drive { [weak self] text in
+
+            }
+            .disposed(by: disposeBag)
+
+        passwordTextField.rx.text
+            .asDriver()
+            .drive { [weak self] text in
+
+            }
+            .disposed(by: disposeBag)
+
+        registerButton.rx.tap
+            .asDriver()
+            .drive { _ in
+                // 登録時の処理
+            }
+            .disposed(by: disposeBag)
+
+    }
+
+    private func createUser() {
+
     }
 
 }

@@ -9,12 +9,12 @@ import UIKit
 
 class CardInfoLabel: UILabel {
 
-    init(frame: CGRect, labelText: String, labelColor: UIColor) {
-        super.init(frame: frame)
+    init(text: String, labelColor: UIColor) {
+        super.init(frame: .zero)
 
         font = .boldSystemFont(ofSize: 45)
-        text = labelText
-        textColor = labelColor
+        self.text = text
+        self.textColor = labelColor
         layer.borderWidth = 3
         layer.borderColor = labelColor.cgColor
         layer.cornerRadius = 10
@@ -27,12 +27,12 @@ class CardInfoLabel: UILabel {
     }
 
     // その他のtextColorが白のLabel
-    init(frame: CGRect, labelText: String, labelFont: UIFont) {
-        super.init(frame: frame)
+    init(text: String, labelFont: UIFont) {
+        super.init(frame: .zero)
 
         font = labelFont
-        textColor = .white
-        text = labelText
+        self.textColor = .white
+        self.text = text
     }
 
 }
