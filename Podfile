@@ -8,6 +8,9 @@ target 'Tinder' do
   # Pods for Tinder
 
   pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 
   target 'TinderTests' do
     inherit! :search_paths
