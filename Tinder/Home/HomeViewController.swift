@@ -16,8 +16,9 @@ class HomeViewController: UIViewController {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let registerViewController = RegisterViewController()
-            registerViewController.modalPresentationStyle = .fullScreen
-            self.present(registerViewController, animated: true)
+            let navi = UINavigationController(rootViewController: registerViewController)
+            navi.modalPresentationStyle = .fullScreen
+            self.present(navi, animated: true)
         }
     }
 

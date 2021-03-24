@@ -17,4 +17,12 @@ extension UIButton {
         return self
     }
 
+    func loginButton(text: String) -> UIButton {
+        self.titleLabel?.font = .systemFont(ofSize: 14)
+        self.setTitle(text, for: .normal)
+        self.setTitleColor(UIColor.white, for: .normal)
+
+        return self
+    }
+
 }
