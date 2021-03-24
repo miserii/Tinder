@@ -16,11 +16,12 @@ class RegisterViewController: UIViewController {
     private let viewModel = RegisterViewModel()
 
     // MARK: Views
-    private let titleLabel = RegisterTitleLabel()
+    private let titleLabel = RegisterTitleLabel(text: "Tinder")
     private let nameTextField = RegisterTextField(placeHolderText: "名前")
     private let emailTextField = RegisterTextField(placeHolderText: "メールアドレス")
     private let passwordTextField = RegisterTextField(placeHolderText: "パスワード")
-    private let registerButton = RegisterButton()
+    private let registerButton = RegisterButton(text: "登録")
+    private let loginButton = UIButton(type: .system).loginButton(text: "アカウントをお持ちの方はこちら")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,12 @@ class RegisterViewController: UIViewController {
         setUpBindins()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.isNavigationBarHidden = true
+    }
+
     private func setUpLayout() {
         passwordTextField.isSecureTextEntry = true
 
@@ -39,14 +46,16 @@ class RegisterViewController: UIViewController {
         baseStackView.axis = .vertical
         baseStackView.distribution = .fillEqually
         baseStackView.spacing = 20
-        view.addSubview(baseStackView)
 
+        view.addSubview(baseStackView)
         view.addSubview(titleLabel)
+        view.addSubview(loginButton)
 
         // ひとつの高さを決めると全部同じ高さになる
         nameTextField.anchor(height: 45)
         baseStackView.anchor(left: view.leftAnchor, right: view.rightAnchor, centerY: view.centerYAnchor, leftPadding: 40, rightPadding: 40)
         titleLabel.anchor(bottom: baseStackView.topAnchor, centerX: view.centerXAnchor, bottomPadding: 20)
+        loginButton.anchor(top: baseStackView.bottomAnchor, centerX: view.centerXAnchor, topPadding: 20)
     }
 
     private func setUpGradientLayer() {
@@ -61,12 +70,10 @@ class RegisterViewController: UIViewController {
     }
 
     private func setUpBindins() {
-        // textFieldのバリデーション
         nameTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
                 self?.viewModel.nameTextInput.onNext(text ?? "")
-                // textの情報ハンドル
             }
             .disposed(by: disposeBag)
 
@@ -74,7 +81,6 @@ class RegisterViewController: UIViewController {
             .asDriver()
             .drive { [weak self] text in
                 self?.viewModel.emailTextOutput.onNext(text ?? "")
-
             }
             .disposed(by: disposeBag)
 
@@ -90,7 +96,15 @@ class RegisterViewController: UIViewController {
             .drive { [weak self] _ in
                 // 登録時の処理
                 self?.createUser()
+            }
+            .disposed(by: disposeBag)
 
+        loginButton.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                // ログイン画面に遷移
+                let login = LoginViewController()
+                self?.navigationController?.pushViewController(login, animated: true)
             }
             .disposed(by: disposeBag)
 

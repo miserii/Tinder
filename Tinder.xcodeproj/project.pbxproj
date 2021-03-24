@@ -11,6 +11,7 @@
 		3BA9BD20ADACEB143DE96400 /* Pods_Tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598719517EC09E7A1FF60C21 /* Pods_Tinder.framework */; };
 		C50FEEB9260BAA460033E0E7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEB8260BAA460033E0E7 /* RegisterViewModel.swift */; };
 		C50FEEE6260BB9290033E0E7 /* RegisterFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */; };
+		C50FEEEC260BBF550033E0E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */; };
 		C591341025E745F900D2DD0F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591340F25E745F900D2DD0F /* BottomView.swift */; };
 		C591341825E7657700D2DD0F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591341725E7657700D2DD0F /* UIImage.swift */; };
 		C59C70052609D0C100595083 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C70042609D0C100595083 /* RegisterButton.swift */; };
@@ -66,6 +67,7 @@
 		6877AB71823A86159267B0B1 /* Pods-Tinder-TinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-TinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-TinderUITests/Pods-Tinder-TinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C50FEEB8260BAA460033E0E7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirebase.swift; sourceTree = "<group>"; };
+		C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C591340F25E745F900D2DD0F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		C591341725E7657700D2DD0F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C59C70042609D0C100595083 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
@@ -167,6 +169,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C50FEEEA260BBF400033E0E7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C50FEEF0260BC2BA0033E0E7 /* Views */,
+				C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C50FEEF0260BC2BA0033E0E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C59133DA25E7349300D2DD0F /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +233,7 @@
 				C59133DA25E7349300D2DD0F /* App */,
 				C59A3BB625EA671900B3BF0A /* extension */,
 				C5E5BF3926075B78002DB779 /* Register */,
+				C50FEEEA260BBF400033E0E7 /* Login */,
 				C5E5BA6425F0CA37002DB779 /* Home */,
 				C5D925B425DD6D3A00A7C4AA /* Assets.xcassets */,
 				C5D925B625DD6D3A00A7C4AA /* LaunchScreen.storyboard */,
@@ -551,6 +570,7 @@
 				C5D925B025DD6D3A00A7C4AA /* HomeViewController.swift in Sources */,
 				C591341825E7657700D2DD0F /* UIImage.swift in Sources */,
 				C5E5BF49260764FD002DB779 /* RegisterTitleLabel.swift in Sources */,
+				C50FEEEC260BBF550033E0E7 /* LoginViewController.swift in Sources */,
 				C5E5BB1D25F599F7002DB779 /* CardInfoLabel.swift in Sources */,
 				C50FEEE6260BB9290033E0E7 /* RegisterFirebase.swift in Sources */,
 				C591341025E745F900D2DD0F /* BottomView.swift in Sources */,
