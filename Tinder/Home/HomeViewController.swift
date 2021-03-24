@@ -12,6 +12,16 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpLayout()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let registerViewController = RegisterViewController()
+            registerViewController.modalPresentationStyle = .fullScreen
+            self.present(registerViewController, animated: true)
+        }
+    }
+
+    private func setUpLayout() {
         view.backgroundColor = .white
 
         let topView = TopView()
