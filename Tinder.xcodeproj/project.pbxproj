@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A6A1DF18966C8665FFDE358 /* Pods_TinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA714FB4DD3A61F74368A66 /* Pods_TinderTests.framework */; };
 		3BA9BD20ADACEB143DE96400 /* Pods_Tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598719517EC09E7A1FF60C21 /* Pods_Tinder.framework */; };
+		C50FEEB9260BAA460033E0E7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEB8260BAA460033E0E7 /* RegisterViewModel.swift */; };
+		C50FEEE6260BB9290033E0E7 /* RegisterFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */; };
 		C591341025E745F900D2DD0F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591340F25E745F900D2DD0F /* BottomView.swift */; };
 		C591341825E7657700D2DD0F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591341725E7657700D2DD0F /* UIImage.swift */; };
 		C59C70052609D0C100595083 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C70042609D0C100595083 /* RegisterButton.swift */; };
@@ -62,6 +64,8 @@
 		598719517EC09E7A1FF60C21 /* Pods_Tinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64088413FF34CC0BD92A0057 /* Pods_Tinder_TinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_TinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6877AB71823A86159267B0B1 /* Pods-Tinder-TinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-TinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-TinderUITests/Pods-Tinder-TinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C50FEEB8260BAA460033E0E7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirebase.swift; sourceTree = "<group>"; };
 		C591340F25E745F900D2DD0F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		C591341725E7657700D2DD0F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C59C70042609D0C100595083 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
@@ -144,6 +148,23 @@
 				187A835841944D0D607DB245 /* Pods-TinderTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C50FEEB6260BAA0B0033E0E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C50FEEB8260BAA460033E0E7 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C50FEEB7260BAA160033E0E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5E5BF4226076257002DB779 /* Views */,
+				C5E5BF3A26075B9A002DB779 /* RegisterViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C59133DA25E7349300D2DD0F /* App */ = {
@@ -245,8 +266,9 @@
 		C5E5BF3926075B78002DB779 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				C5E5BF4226076257002DB779 /* Views */,
-				C5E5BF3A26075B9A002DB779 /* RegisterViewController.swift */,
+				C50FEEB7260BAA160033E0E7 /* View */,
+				C50FEEB6260BAA0B0033E0E7 /* ViewModel */,
+				C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -530,10 +552,12 @@
 				C591341825E7657700D2DD0F /* UIImage.swift in Sources */,
 				C5E5BF49260764FD002DB779 /* RegisterTitleLabel.swift in Sources */,
 				C5E5BB1D25F599F7002DB779 /* CardInfoLabel.swift in Sources */,
+				C50FEEE6260BB9290033E0E7 /* RegisterFirebase.swift in Sources */,
 				C591341025E745F900D2DD0F /* BottomView.swift in Sources */,
 				C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */,
 				C5E5BB1825F572F2002DB779 /* UIColor.swift in Sources */,
 				C5D925AC25DD6D3A00A7C4AA /* AppDelegate.swift in Sources */,
+				C50FEEB9260BAA460033E0E7 /* RegisterViewModel.swift in Sources */,
 				C5E5BA6A25F0CA81002DB779 /* TopView.swift in Sources */,
 				C5E5BD4D25FB4500002DB779 /* UIButton.swift in Sources */,
 				C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */,

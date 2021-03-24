@@ -13,6 +13,7 @@ import FirebaseFirestore
 class RegisterViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
+    private let viewModel = RegisterViewModel()
 
     // MARK: Views
     private let titleLabel = RegisterTitleLabel()
@@ -60,9 +61,11 @@ class RegisterViewController: UIViewController {
     }
 
     private func setUpBindins() {
+        // textFieldのバリデーション
         nameTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
+                self?.viewModel.nameTextInput.onNext(text ?? "")
                 // textの情報ハンドル
             }
             .disposed(by: disposeBag)
@@ -70,6 +73,7 @@ class RegisterViewController: UIViewController {
         emailTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
+                self?.viewModel.emailTextOutput.onNext(text ?? "")
 
             }
             .disposed(by: disposeBag)
@@ -77,7 +81,7 @@ class RegisterViewController: UIViewController {
         passwordTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
-
+                self?.viewModel.passwordTextOutput.onNext(text ?? "")
             }
             .disposed(by: disposeBag)
 
@@ -85,46 +89,32 @@ class RegisterViewController: UIViewController {
             .asDriver()
             .drive { [weak self] _ in
                 // 登録時の処理
-                self?.createUserFireAuth()
+                self?.createUser()
 
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.validRegisterDriver
+            .drive { validAll in
+                self.registerButton.isEnabled = validAll
+                self.registerButton.backgroundColor = validAll ? .rgb(red: 227, green: 48, blue: 78): .init(white: 0.7, alpha: 1)
             }
             .disposed(by: disposeBag)
 
     }
 
-    // Fireauthに保存
-    private func createUserFireAuth() {
-        guard let email = emailTextField.text else { return }
-        guard let passwoard = passwordTextField.text else { return }
+    private func createUser() {
+        let name = nameTextField.text
+        let email = emailTextField.text
+        let password = passwordTextField.text
 
-        Auth.auth().createUser(withEmail: email, password: passwoard) { (auth, err) in
-            if let err = err {
-                print("auth情報の保存に失敗: ", err)
-                return
+        Auth.createUserFireAuth(name: name, email: email, password: password) { success in
+            if success {
+                print("会員登録の処理が完了")
+                self.dismiss(animated: true)
+            } else {
+
             }
-            guard let uid = auth?.user.uid else { return }
-            self.setUserDataFirestore(email: email, uid: uid)
-        }
-    }
-
-    // Firestoreに保存
-    private func setUserDataFirestore(email: String, uid: String) {
-        guard let name = nameTextField.text else { return }
-
-        let document = [
-            "name" : name,
-            "email" : email,
-            "createAt" : Timestamp()
-        ] as [String : Any]
-
-        // ドキュメントidをuidにする
-        Firestore.firestore().collection("users").document(uid).setData(document) { err in
-            // errorがnilじゃない時はprint
-            if let err = err {
-                print("FireStoreへのユーザー情報の保存に失敗: ", err)
-                return
-            }
-            print("Firestoreへのユーザー情報の保存に成功: ")
         }
     }
 
