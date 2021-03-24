@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
 
@@ -91,6 +92,7 @@ class RegisterViewController: UIViewController {
 
     }
 
+    // Fireauthに保存
     private func createUserFireAuth() {
         guard let email = emailTextField.text else { return }
         guard let passwoard = passwordTextField.text else { return }
@@ -101,7 +103,28 @@ class RegisterViewController: UIViewController {
                 return
             }
             guard let uid = auth?.user.uid else { return }
-            print("auth情報の取得に成功: ", uid)
+            self.setUserDataFirestore(email: email, uid: uid)
+        }
+    }
+
+    // Firestoreに保存
+    private func setUserDataFirestore(email: String, uid: String) {
+        guard let name = nameTextField.text else { return }
+
+        let document = [
+            "name" : name,
+            "email" : email,
+            "createAt" : Timestamp()
+        ] as [String : Any]
+
+        // ドキュメントidをuidにする
+        Firestore.firestore().collection("users").document(uid).setData(document) { err in
+            // errorがnilじゃない時はprint
+            if let err = err {
+                print("FireStoreへのユーザー情報の保存に失敗: ", err)
+                return
+            }
+            print("Firestoreへのユーザー情報の保存に成功: ")
         }
     }
 
