@@ -86,6 +86,7 @@ class LoginViewController: UIViewController {
                 return
             }
             print("ログインに成功")
+            self.dismiss(animated: true, completion: nil)
         }
     }
 
