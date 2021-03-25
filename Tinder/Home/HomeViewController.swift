@@ -6,15 +6,27 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
+
+    let logoutButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("ログアウト", for: .normal)
+
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpLayout()
+    }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if Auth.auth().currentUser?.uid == nil {
             let registerViewController = RegisterViewController()
             let navi = UINavigationController(rootViewController: registerViewController)
             navi.modalPresentationStyle = .fullScreen
@@ -33,6 +45,7 @@ class HomeViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         self.view.addSubview(stackView)
+        self.view.addSubview(logoutButton)
 
         [
             topView.heightAnchor.constraint(equalToConstant: 100),
@@ -43,6 +56,21 @@ class HomeViewController: UIViewController {
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ]
         .forEach { $0.isActive = true }
+
+        logoutButton.anchor(bottom: view.bottomAnchor, left: view.leftAnchor, bottomPadding: 10, leftPadding: 10)
+        logoutButton.addTarget(self, action: #selector(tapLogout), for: .touchUpInside)
+    }
+
+    @objc private func tapLogout() {
+        do {
+            try Auth.auth().signOut()
+            let registerViewController = RegisterViewController()
+            let navi = UINavigationController(rootViewController: registerViewController)
+            navi.modalPresentationStyle = .fullScreen
+            self.present(navi, animated: true)
+        } catch {
+            print("ログアウトに失敗: ", error)
+        }
     }
 
 }

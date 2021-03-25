@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -65,6 +66,27 @@ class LoginViewController: UIViewController {
                 self?.navigationController?.popViewController(animated: true)
             }
             .disposed(by: disposeBag)
+
+        registerButton.rx.tap
+            .asDriver()
+            .drive { [weak self] text in
+                self?.loginFireAuth()
+            }
+            .disposed(by: disposeBag)
+
+    }
+
+    private func loginFireAuth() {
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+
+        Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
+            if let err = err {
+                print("ログインに失敗: ", err)
+                return
+            }
+            print("ログインに成功")
+        }
     }
 
 }
