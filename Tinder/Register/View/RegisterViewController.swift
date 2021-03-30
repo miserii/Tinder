@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import FirebaseAuth
 import FirebaseFirestore
+import PKHUD
 
 class RegisterViewController: UIViewController {
 
@@ -121,8 +122,9 @@ class RegisterViewController: UIViewController {
         let name = nameTextField.text
         let email = emailTextField.text
         let password = passwordTextField.text
-
+        HUD.show(.progress)
         Auth.createUserFireAuth(name: name, email: email, password: password) { success in
+            HUD.hide()
             if success {
                 print("会員登録の処理が完了")
                 self.dismiss(animated: true)
