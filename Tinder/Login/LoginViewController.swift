@@ -71,28 +71,25 @@ class LoginViewController: UIViewController {
         registerButton.rx.tap
             .asDriver()
             .drive { [weak self] text in
-                self?.loginFireAuth()
+                self?.login()
             }
             .disposed(by: disposeBag)
 
     }
 
-    private func loginFireAuth() {
+    private func login() {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
 
         // インジケーターを出し始める
         HUD.show(.progress)
-
-        Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
-            if let err = err {
-                print("ログインに失敗: ", err)
-                return
-            }
-            print("ログインに成功")
-            // 成功したら消す
+        Auth.loginFireAuth(email: email, password: password) { (success) in
             HUD.hide()
-            self.dismiss(animated: true, completion: nil)
+            if success {
+                self.dismiss(animated: true)
+            } else {
+
+            }
         }
     }
 

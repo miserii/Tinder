@@ -203,6 +203,7 @@
 				C5E5BB0A25F553F2002DB779 /* UIView.swift */,
 				C5E5BB1725F572F2002DB779 /* UIColor.swift */,
 				C5E5BD4C25FB4500002DB779 /* UIButton.swift */,
+				C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -289,7 +290,6 @@
 			children = (
 				C50FEEB7260BAA160033E0E7 /* View */,
 				C50FEEB6260BAA0B0033E0E7 /* ViewModel */,
-				C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
