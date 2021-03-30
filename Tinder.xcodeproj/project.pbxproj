@@ -12,6 +12,7 @@
 		C50FEEB9260BAA460033E0E7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEB8260BAA460033E0E7 /* RegisterViewModel.swift */; };
 		C50FEEE6260BB9290033E0E7 /* RegisterFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */; };
 		C50FEEEC260BBF550033E0E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */; };
+		C5101AF326136925004B8DD9 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C5101AF226136925004B8DD9 /* PKHUD */; };
 		C591341025E745F900D2DD0F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591340F25E745F900D2DD0F /* BottomView.swift */; };
 		C591341825E7657700D2DD0F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591341725E7657700D2DD0F /* UIImage.swift */; };
 		C59C70052609D0C100595083 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C70042609D0C100595083 /* RegisterButton.swift */; };
@@ -106,6 +107,7 @@
 				C5E5BABA25F3ECAC002DB779 /* RxRelay in Frameworks */,
 				C5E5BAB825F3ECAC002DB779 /* RxCocoa in Frameworks */,
 				C5E5BAB625F3ECAC002DB779 /* RxSwift in Frameworks */,
+				C5101AF326136925004B8DD9 /* PKHUD in Frameworks */,
 				3BA9BD20ADACEB143DE96400 /* Pods_Tinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +327,7 @@
 				C5E5BAB525F3ECAC002DB779 /* RxSwift */,
 				C5E5BAB725F3ECAC002DB779 /* RxCocoa */,
 				C5E5BAB925F3ECAC002DB779 /* RxRelay */,
+				C5101AF226136925004B8DD9 /* PKHUD */,
 			);
 			productName = Tinder;
 			productReference = C5D925A825DD6D3A00A7C4AA /* Tinder.app */;
@@ -402,6 +405,7 @@
 			mainGroup = C5D9259F25DD6D3A00A7C4AA;
 			packageReferences = (
 				C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C5101AF126136925004B8DD9 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = C5D925A925DD6D3A00A7C4AA /* Products */;
 			projectDirPath = "";
@@ -917,6 +921,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C5101AF126136925004B8DD9 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -928,6 +940,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C5101AF226136925004B8DD9 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5101AF126136925004B8DD9 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
 		C5E5BAB525F3ECAC002DB779 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C5E5BAB425F3ECAC002DB779 /* XCRemoteSwiftPackageReference "RxSwift" */;
