@@ -7,8 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
+
+    private var user: User?
 
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
@@ -23,6 +26,18 @@ class HomeViewController: UIViewController {
         setUpLayout()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        Firestore.getUserFireStore(uid: uid) { (user) in
+//            if let user = user {
+//                self.user = user
+//
+//            }
+//        }
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -32,6 +47,20 @@ class HomeViewController: UIViewController {
             navi.modalPresentationStyle = .fullScreen
             self.present(navi, animated: true)
         }
+
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.getUserFireStore(uid: uid) { (user) in
+            if let user = user {
+                self.user = user
+
+            }
+        }
+
+
+    }
+
+    private func fetchUsers() {
+        
     }
 
     private func setUpLayout() {
