@@ -8,10 +8,16 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import PKHUD
 
 class HomeViewController: UIViewController {
 
     private var user: User?
+    private var users = [User]()
+
+    let topView = TopView()
+    let cardView = UIView()
+    let bottomView = BottomView()
 
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
@@ -52,23 +58,29 @@ class HomeViewController: UIViewController {
         Firestore.getUserFireStore(uid: uid) { (user) in
             if let user = user {
                 self.user = user
-
             }
         }
-
+        fetchUsers()
 
     }
 
     private func fetchUsers() {
-        
+        HUD.show(.progress)
+        Firestore.fetchUsersFirestore { (users) in
+            HUD.hide()
+            self.users = users
+
+            self.users.forEach { (user) in
+                let card = CardView(user: user)
+                self.cardView.addSubview(card)
+                card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
+            }
+            print("ユーザー情報の取得に成功")
+        }
     }
 
     private func setUpLayout() {
         view.backgroundColor = .white
-
-        let topView = TopView()
-        let cardView = CardView()
-        let bottomView = BottomView()
 
         let stackView = UIStackView(arrangedSubviews: [topView, cardView, bottomView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
