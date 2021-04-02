@@ -81,8 +81,30 @@ extension Firestore {
     }
 
     // Firestoreから自分以外のユーザー情報を取得
-    static func fetchUsersFirestore() {
-        
+    static func fetchUsersFirestore(compeltion: @escaping ([User]) -> Void) {
+        Firestore.firestore().collection("users").getDocuments { (snapShots, err) in
+            if let err = err {
+                print("ユーザー情報の取得に失敗: ", err)
+                return
+            }
+            /*
+            var users = [User]()
+            snapShots?.documents.forEach({ (snapShot) in
+
+                let data = snapShot.data()
+                let user = User(dic: data)
+                users.append(user)
+            })
+            */
+            let users = snapShots?.documents.map({ (snapShot) -> User in
+                // mapがドキュメントそれぞれに処理を行い、新しい値を戻してる
+                let data = snapShot.data()
+                let user = User(dic: data)
+                return user
+            })
+
+            compeltion(users ?? [User]())
+        }
     }
 
 }
