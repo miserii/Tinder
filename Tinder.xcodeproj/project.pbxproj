@@ -13,6 +13,7 @@
 		C50FEEE6260BB9290033E0E7 /* RegisterFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */; };
 		C50FEEEC260BBF550033E0E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */; };
 		C5101AF326136925004B8DD9 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C5101AF226136925004B8DD9 /* PKHUD */; };
+		C5101B2F261740DD004B8DD9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5101B2E261740DD004B8DD9 /* User.swift */; };
 		C591341025E745F900D2DD0F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591340F25E745F900D2DD0F /* BottomView.swift */; };
 		C591341825E7657700D2DD0F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591341725E7657700D2DD0F /* UIImage.swift */; };
 		C59C70052609D0C100595083 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C70042609D0C100595083 /* RegisterButton.swift */; };
@@ -69,6 +70,7 @@
 		C50FEEB8260BAA460033E0E7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirebase.swift; sourceTree = "<group>"; };
 		C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C5101B2E261740DD004B8DD9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C591340F25E745F900D2DD0F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		C591341725E7657700D2DD0F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C59C70042609D0C100595083 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				C5E5BA6525F0CA4D002DB779 /* Views */,
 				C5D925AF25DD6D3A00A7C4AA /* HomeViewController.swift */,
+				C5101B2E261740DD004B8DD9 /* User.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				C5E5BB1D25F599F7002DB779 /* CardInfoLabel.swift in Sources */,
 				C50FEEE6260BB9290033E0E7 /* RegisterFirebase.swift in Sources */,
 				C591341025E745F900D2DD0F /* BottomView.swift in Sources */,
+				C5101B2F261740DD004B8DD9 /* User.swift in Sources */,
 				C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */,
 				C5E5BB1825F572F2002DB779 /* UIColor.swift in Sources */,
 				C5D925AC25DD6D3A00A7C4AA /* AppDelegate.swift in Sources */,
