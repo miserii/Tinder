@@ -14,6 +14,9 @@
 		C50FEEEC260BBF550033E0E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */; };
 		C5101AF326136925004B8DD9 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C5101AF226136925004B8DD9 /* PKHUD */; };
 		C5101B2F261740DD004B8DD9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5101B2E261740DD004B8DD9 /* User.swift */; };
+		C5101B4F261B5422004B8DD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5101B4E261B5422004B8DD9 /* ProfileViewController.swift */; };
+		C5101B71261C56CA004B8DD9 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5101B70261C56CA004B8DD9 /* ProfileImageView.swift */; };
+		C5101B76261C5782004B8DD9 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5101B75261C5782004B8DD9 /* ProfileLabel.swift */; };
 		C591341025E745F900D2DD0F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591340F25E745F900D2DD0F /* BottomView.swift */; };
 		C591341825E7657700D2DD0F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C591341725E7657700D2DD0F /* UIImage.swift */; };
 		C59C70052609D0C100595083 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C70042609D0C100595083 /* RegisterButton.swift */; };
@@ -38,6 +41,8 @@
 		C5E5BF3B26075B9A002DB779 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BF3A26075B9A002DB779 /* RegisterViewController.swift */; };
 		C5E5BF442607627F002DB779 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BF432607627F002DB779 /* RegisterTextField.swift */; };
 		C5E5BF49260764FD002DB779 /* RegisterTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E5BF48260764FD002DB779 /* RegisterTitleLabel.swift */; };
+		C5FF1D7E261DF1BA0047F575 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF1D7D261DF1BA0047F575 /* ProfileTextField.swift */; };
+		C5FF1D83261DF7CC0047F575 /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF1D82261DF7CC0047F575 /* InfoCollectionViewCell.swift */; };
 		DCBE6F250312FBD39BFA1BF7 /* Pods_Tinder_TinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64088413FF34CC0BD92A0057 /* Pods_Tinder_TinderUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +76,9 @@
 		C50FEEE5260BB9290033E0E7 /* RegisterFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirebase.swift; sourceTree = "<group>"; };
 		C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C5101B2E261740DD004B8DD9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5101B4E261B5422004B8DD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C5101B70261C56CA004B8DD9 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		C5101B75261C5782004B8DD9 /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
 		C591340F25E745F900D2DD0F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		C591341725E7657700D2DD0F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C59C70042609D0C100595083 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
@@ -98,6 +106,8 @@
 		C5E5BF3A26075B9A002DB779 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C5E5BF432607627F002DB779 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
 		C5E5BF48260764FD002DB779 /* RegisterTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTitleLabel.swift; sourceTree = "<group>"; };
+		C5FF1D7D261DF1BA0047F575 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		C5FF1D82261DF7CC0047F575 /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCB44D46EDEAE0D182CD581C /* Pods-Tinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder.release.xcconfig"; path = "Target Support Files/Pods-Tinder/Pods-Tinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +199,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C5101B4D261B53FB004B8DD9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C5101B7A261C5F06004B8DD9 /* View */,
+				C5101B4E261B5422004B8DD9 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C5101B7A261C5F06004B8DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5101B70261C56CA004B8DD9 /* ProfileImageView.swift */,
+				C5101B75261C5782004B8DD9 /* ProfileLabel.swift */,
+				C5FF1D7D261DF1BA0047F575 /* ProfileTextField.swift */,
+				C5FF1D82261DF7CC0047F575 /* InfoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C59133DA25E7349300D2DD0F /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +270,7 @@
 				C5E5BF3926075B78002DB779 /* Register */,
 				C50FEEEA260BBF400033E0E7 /* Login */,
 				C5E5BA6425F0CA37002DB779 /* Home */,
+				C5101B4D261B53FB004B8DD9 /* Profile */,
 				C5D925B425DD6D3A00A7C4AA /* Assets.xcassets */,
 				C5D925B625DD6D3A00A7C4AA /* LaunchScreen.storyboard */,
 				C5E5BF2026064ABB002DB779 /* GoogleService-Info.plist */,
@@ -573,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FF1D83261DF7CC0047F575 /* InfoCollectionViewCell.swift in Sources */,
 				C59C70052609D0C100595083 /* RegisterButton.swift in Sources */,
 				C5D925B025DD6D3A00A7C4AA /* HomeViewController.swift in Sources */,
 				C591341825E7657700D2DD0F /* UIImage.swift in Sources */,
@@ -584,13 +616,17 @@
 				C5101B2F261740DD004B8DD9 /* User.swift in Sources */,
 				C5E5BB0B25F553F2002DB779 /* UIView.swift in Sources */,
 				C5E5BB1825F572F2002DB779 /* UIColor.swift in Sources */,
+				C5FF1D7E261DF1BA0047F575 /* ProfileTextField.swift in Sources */,
 				C5D925AC25DD6D3A00A7C4AA /* AppDelegate.swift in Sources */,
 				C50FEEB9260BAA460033E0E7 /* RegisterViewModel.swift in Sources */,
 				C5E5BA6A25F0CA81002DB779 /* TopView.swift in Sources */,
 				C5E5BD4D25FB4500002DB779 /* UIButton.swift in Sources */,
 				C5E5BB1025F55E40002DB779 /* CardView.swift in Sources */,
+				C5101B71261C56CA004B8DD9 /* ProfileImageView.swift in Sources */,
+				C5101B76261C5782004B8DD9 /* ProfileLabel.swift in Sources */,
 				C5E5BF442607627F002DB779 /* RegisterTextField.swift in Sources */,
 				C5E5BF3B26075B9A002DB779 /* RegisterViewController.swift in Sources */,
+				C5101B4F261B5422004B8DD9 /* ProfileViewController.swift in Sources */,
 				C5E5BD5225FB45F9002DB779 /* CardImageView.swift in Sources */,
 				C5D925AE25DD6D3A00A7C4AA /* SceneDelegate.swift in Sources */,
 			);
