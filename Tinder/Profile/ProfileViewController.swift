@@ -38,7 +38,7 @@ class ProfileViewController: UIViewController {
 
     private func setUpLayout() {
         view.backgroundColor = .white
-        nameLabel.text = "test name"
+        nameLabel.text = user?.name
 
         view.addSubview(saveButton)
         view.addSubview(logOutButton)
@@ -64,6 +64,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = infoCollectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InfoCollectionViewCell
+        cell.user = self.user
 
         return cell
     }

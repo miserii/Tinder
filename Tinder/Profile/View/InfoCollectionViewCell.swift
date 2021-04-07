@@ -9,6 +9,14 @@ import UIKit
 
 class InfoCollectionViewCell: UICollectionViewCell {
 
+    var user: User? {
+        // userに値がセットされたときに呼ばれる
+        didSet {
+            nameTextField.text = user?.name
+            emailTextField.text = user?.email
+        }
+    }
+
     let nameLabel = ProfileLabel(title: "名前")
     let nameTextField = ProfileTextField(placeholder: "名前")
     let ageLabel = ProfileLabel(title: "年齢")
