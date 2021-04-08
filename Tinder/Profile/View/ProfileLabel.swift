@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileLabel: UILabel {
+final class ProfileLabel: UILabel {
 
     init() {
         super.init(frame: .zero)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardImageView: UIImageView {
+final class CardImageView: UIImageView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-class User {
+final class User {
 
     var email: String
     var name: String

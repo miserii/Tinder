@@ -10,7 +10,7 @@ import RxSwift
 import FirebaseAuth
 import PKHUD
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
 

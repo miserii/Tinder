@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileTextField: UITextField {
+final class ProfileTextField: UITextField {
 
     init(placeholder: String) {
         super.init(frame: .zero)

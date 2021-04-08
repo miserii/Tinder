@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BottomView: UIView {
+final class BottomView: UIView {
 
     let reloadView = BottomButtonView(frame: .zero, width: 50, imageName: "reload")
     let nopeView = BottomButtonView(frame: .zero, width: 60, imageName: "nope")
@@ -37,7 +37,7 @@ class BottomView: UIView {
 
 }
 
-class BottomButtonView: UIView {
+final class BottomButtonView: UIView {
 
     var button: BottomButtonAnime?
 
@@ -64,7 +64,7 @@ class BottomButtonView: UIView {
 }
 
 // ボタンを押した際にサイズを縮小してアニメーションをつける
-class BottomButtonAnime: UIButton {
+final class BottomButtonAnime: UIButton {
 
     override var isHighlighted: Bool {
         didSet {

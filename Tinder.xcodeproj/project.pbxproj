@@ -186,17 +186,9 @@
 		C50FEEEA260BBF400033E0E7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C50FEEF0260BC2BA0033E0E7 /* Views */,
 				C50FEEEB260BBF550033E0E7 /* LoginViewController.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		C50FEEF0260BC2BA0033E0E7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C5101B4D261B53FB004B8DD9 /* Profile */ = {
