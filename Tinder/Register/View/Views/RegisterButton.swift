@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterButton: UIButton {
+final class RegisterButton: UIButton {
 
     override var isHighlighted: Bool {
         didSet {

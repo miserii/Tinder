@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileImageView: UIImageView {
+final class ProfileImageView: UIImageView {
 
     init() {
         super.init(frame: .zero)

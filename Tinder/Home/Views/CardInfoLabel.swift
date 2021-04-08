@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardInfoLabel: UILabel {
+final class CardInfoLabel: UILabel {
 
     init(text: String, labelColor: UIColor) {
         super.init(frame: .zero)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardView: UIView {
+final class CardView: UIView {
 
     private let gradientLayer = CAGradientLayer()
 

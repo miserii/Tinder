@@ -21,7 +21,7 @@ protocol RegisterViewModelOutput {
     var passwordTextOutput: PublishSubject<String> { get }
 }
 
-class RegisterViewModel: RegisterViewModelInput, RegisterViewModelOutput {
+final class RegisterViewModel: RegisterViewModelInput, RegisterViewModelOutput {
 
     let disposeBag = DisposeBag()
 

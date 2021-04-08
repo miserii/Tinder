@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import PKHUD
 
-class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
     private let viewModel = RegisterViewModel()

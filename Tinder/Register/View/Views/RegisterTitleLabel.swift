@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterTitleLabel: UILabel {
+final class RegisterTitleLabel: UILabel {
 
     init(text: String) {
         super.init(frame: .zero)

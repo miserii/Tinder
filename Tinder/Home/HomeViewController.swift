@@ -12,7 +12,7 @@ import PKHUD
 import RxSwift
 import RxCocoa
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
 

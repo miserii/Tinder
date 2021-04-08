@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoCollectionViewCell: UICollectionViewCell {
+final class InfoCollectionViewCell: UICollectionViewCell {
 
     var user: User? {
         // userに値がセットされたときに呼ばれる
