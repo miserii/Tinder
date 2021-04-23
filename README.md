@@ -15,7 +15,7 @@ UI implementation: codeLayout + XIB
 Architecture: MVVM + RxSwift
 
 # Author
-@miserii
+@oskmr
 
 # Contribution
 - [New issue](https://github.com/miserii/Tinder/issues)
